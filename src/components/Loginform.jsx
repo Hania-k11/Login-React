@@ -1,6 +1,8 @@
 import React from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
+import Home from './Home';
+import Unauthorized from './Unauthorized';
 
 const LoginForm = () => {
     const mystate= useContext(AuthContext);
@@ -12,11 +14,19 @@ const LoginForm = () => {
         e.preventDefault(); // Prevents the default form submission behavior
         console.log('Login button clicked');
         console.log('Username:', mystate.username);
+        console.log('autheticated:', mystate.isAuthenticated);
+
         console.log('Password:', mystate.password);
-
-        
-
-
+         
+       
+     
+        if (mystate.username === 'Hania' && mystate.password === '123') {
+            mystate.setIsAuthenticated(true);
+            console.log('Authentication successful');
+          } else {
+           
+            console.log('Authentication failed');
+          }
 
         // Add any other functionality you want to perform on button click here
       };
@@ -52,10 +62,18 @@ const LoginForm = () => {
           <button
             type="submit"
             onClick={handleClick}
+            
             className="w-full bg-blue-500 text-white font-medium py-3 rounded-lg hover:bg-blue-600 transition duration-300"
           >
             Login
           </button>
+          <div>
+    {mystate.isAuthenticated ? (
+      <Home/>
+    ) : (
+      <Unauthorized/>
+    )}
+  </div>
         </form>
       </div>
     </div>

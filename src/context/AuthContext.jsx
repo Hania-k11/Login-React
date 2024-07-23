@@ -5,8 +5,8 @@ export const AuthContext = createContext(null);
 
 export const AuthProvider = (props) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [username, setUsername] = useState('Hania');
-  const [password, setPassword] = useState('123');
+  const [username, setUsername] = useState(' ');
+  const [password, setPassword] = useState(' ');
 
   
 

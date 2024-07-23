@@ -22,6 +22,7 @@ const LoginForm = () => {
      
         if (mystate.username === 'Hania' && mystate.password === '123') {
             mystate.setIsAuthenticated(true);
+            
             console.log('Authentication successful');
           } else {
            

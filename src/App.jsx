@@ -10,8 +10,8 @@ import { AuthContext } from './context/AuthContext'
 
 function App() {
 
-  const state = useContext(AuthContext)
-  console.log("Context", state)
+  // const state = useContext(AuthContext)
+  // console.log("Context", state)
 
   return (
     <>

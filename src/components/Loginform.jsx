@@ -11,7 +11,7 @@ const LoginForm = () => {
 
 
     const handleClick = (e) => {
-        e.preventDefault(); // Prevents the default form submission behavior
+        e.preventDefault(); 
         console.log('Login button clicked');
         console.log('Username:', mystate.username);
         console.log('autheticated:', mystate.isAuthenticated);
@@ -22,15 +22,22 @@ const LoginForm = () => {
      
         if (mystate.username === 'Hania' && mystate.password === '123') {
             mystate.setIsAuthenticated(true);
-            
             console.log('Authentication successful');
           } else {
            
             console.log('Authentication failed');
           }
 
-        // Add any other functionality you want to perform on button click here
+       
       };
+
+      if (mystate.attempted) {
+        if (mystate.isAuthenticated) {
+          return <Home />;
+        } else {
+          return <Unauthorized />;
+        }
+      }
     
 
   return (

@@ -22,6 +22,18 @@ function App() {
         <Unauthorized />
       )}
     </div>
+
+//     <div>
+// {state.attempted? (
+// state.isAuthenticated? (
+// <Home />
+// ) : (
+// <Unauthorized />
+// )
+// ) : (
+// <Loginform />
+// )}
+// </div>
   )
 }
 

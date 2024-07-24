@@ -15,6 +15,7 @@ const LoginForm = () => {
         console.log('Login button clicked');
         console.log('Username:', mystate.username);
         console.log('autheticated:', mystate.isAuthenticated);
+        console.log('attempt',mystate.attempted)
 
         console.log('Password:', mystate.password);
          
@@ -22,6 +23,8 @@ const LoginForm = () => {
      
         if (mystate.username === 'Hania' && mystate.password === '123') {
             mystate.setIsAuthenticated(true);
+            mystate.setAttempted(true);
+
             console.log('Authentication successful');
           } else {
             mystate.setIsAuthenticated(false);
@@ -31,13 +34,13 @@ const LoginForm = () => {
        
       };
 
-      if (mystate.attempted) {
-        if (mystate.isAuthenticated) {
-          return <Home />;
-        } else {
-          return <Unauthorized />;
-        }
-      }
+    //   if (mystate.attempted) {
+    //     if (mystate.isAuthenticated) {
+    //       return <Home />;
+    //     } else {
+    //       return <Unauthorized />;
+    //     }
+    //   }
     
 
   return (

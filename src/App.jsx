@@ -14,26 +14,26 @@ function App() {
   // console.log("Context", state)
 
   return (
-    <div>
-      <Loginform/>
-      {state.isAuthenticated ? (
-        <Home />
-      ) : (
-        <Unauthorized />
-      )}
-    </div>
+    // <div>
+    //   <Loginform/>
+    //   {state.isAuthenticated ? (
+    //     <Home />
+    //   ) : (
+    //     <Unauthorized />
+    //   )}
+    // </div>
 
-//     <div>
-// {state.attempted? (
-// state.isAuthenticated? (
-// <Home />
-// ) : (
-// <Unauthorized />
-// )
-// ) : (
-// <Loginform />
-// )}
-// </div>
+    <div>
+{state.attempted? (
+state.isAuthenticated? (
+<Home />
+) : (
+<Unauthorized />
+)
+) : (
+<Loginform />
+)}
+</div>
   )
 }
 

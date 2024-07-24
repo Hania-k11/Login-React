@@ -19,12 +19,12 @@ const LoginForm = () => {
 
         console.log('Password:', mystate.password);
          
-       
+        mystate.setAttempted(true);
+
      
         if (mystate.username === 'Hania' && mystate.password === '123') {
             mystate.setIsAuthenticated(true);
-            mystate.setAttempted(true);
-
+       
             console.log('Authentication successful');
           } else {
             mystate.setIsAuthenticated(false);

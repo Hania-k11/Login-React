@@ -24,7 +24,7 @@ const LoginForm = () => {
             mystate.setIsAuthenticated(true);
             console.log('Authentication successful');
           } else {
-           
+            mystate.setIsAuthenticated(false);
             console.log('Authentication failed');
           }
 
@@ -75,13 +75,7 @@ const LoginForm = () => {
           >
             Login
           </button>
-          <div>
-    {mystate.isAuthenticated ? (
-      <Home/>
-    ) : (
-      <Unauthorized/>
-    )}
-  </div>
+          
         </form>
       </div>
     </div>

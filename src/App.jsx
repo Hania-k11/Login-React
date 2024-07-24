@@ -10,16 +10,18 @@ import { AuthContext } from './context/AuthContext'
 
 function App() {
 
-  // const state = useContext(AuthContext)
+   const state = useContext(AuthContext)
   // console.log("Context", state)
 
   return (
-    <>
-
-    <Loginform/>
-    {/* <Home/> */}
-    {/* <Unauthorized/> */}
-    </>
+    <div>
+      <Loginform/>
+      {state.isAuthenticated ? (
+        <Home />
+      ) : (
+        <Unauthorized />
+      )}
+    </div>
   )
 }
 

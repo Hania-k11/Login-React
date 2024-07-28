@@ -1,8 +1,35 @@
-# React + Vite
+# React Login Authentication
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React project demonstrating a login authentication mechanism. Users can log in with a predefined username and password. Upon successful authentication, users are redirected to the `Home` component. If authentication fails, they are redirected to the `Unauthorized` component.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Login form with username and password fields
+- Authentication check
+- Redirect to `Home` component on successful login
+- Redirect to `Unauthorized` component on failed login
+- Protected routes
+
+## Technologies Used
+
+- React
+- React Router
+- Context API for authentication state
+- Tailwind CSS for styling
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/react-login-authentication.git
+   cd react-login-authentication
